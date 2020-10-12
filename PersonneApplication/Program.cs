@@ -16,8 +16,7 @@ namespace PersonneApplication
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-
-        // Un jeu de test
+            // Un jeu de test
             Service production = new Service(1, "Production");
             Service compta = new Service(1, "Comptabilité");
             Service direction = new Service(1, "Direction");
@@ -32,7 +31,6 @@ namespace PersonneApplication
 
             // Affichage des personnes
             entreprise.AfficherPersonnel();
-
             // Affichage des personnes du service "production"
             Console.WriteLine("\nAffichage du personnel du service Production");
             AffichePersonnes(entreprise.RechercherPersonnesDuService_Linq("production"));

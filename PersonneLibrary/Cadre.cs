@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PersonneLibrary
 {
@@ -14,7 +10,6 @@ namespace PersonneLibrary
 
         #region Attributs
         private double prime;
-        private double tauxCadre;
         private TypeStatus status;
         #endregion
 
@@ -32,11 +27,6 @@ namespace PersonneLibrary
                     throw new Exception("La prime doit être comprise entre 0 et 6000€ (non inclus");
                 }
             }
-        }
-
-        public override double SalaireNet
-        {
-            get { return ((salaireBrut + prime) - ((salaireBrut + prime) * TauxImposition)); }
         }
 
         public TypeStatus Status 
@@ -59,7 +49,7 @@ namespace PersonneLibrary
         #region Propriétés abstraites
         public override double TauxImposition
         {
-            get { return tauxCadre = 0.25; }
+            get { return 0.25; }
         }
 
         public override double SupplementSalaire

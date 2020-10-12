@@ -85,6 +85,11 @@ namespace PersonneLibrary
             }
         }
 
+        public double SalaireNet
+        {
+            get { return (SalaireBrut + SupplementSalaire) * (1 -TauxImposition); }
+        }
+
         public Service Service
         {
             get { return service; }
@@ -119,11 +124,6 @@ namespace PersonneLibrary
         public virtual double SupplementSalaire
         {
             get;
-        }
-
-        public virtual double SalaireNet
-        {
-            get { return (SalaireBrut + SupplementSalaire) - (TauxImposition * (SalaireBrut + SupplementSalaire)); }
         }
         #endregion
 

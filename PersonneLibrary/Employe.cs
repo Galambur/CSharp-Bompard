@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PersonneLibrary
 {
@@ -10,7 +6,6 @@ namespace PersonneLibrary
     {
         #region Attributs
         private int nbRTT;
-        private double tauxEmploye;
         #endregion
 
         #region Proprietes
@@ -33,7 +28,7 @@ namespace PersonneLibrary
         #region Propriétés abstraites
         public override double TauxImposition
         {
-            get { return tauxEmploye = 0.2; }
+            get { return 0.2; }
         }
 
         public override double SupplementSalaire
