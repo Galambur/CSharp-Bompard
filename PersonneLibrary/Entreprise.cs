@@ -23,7 +23,7 @@ namespace PersonneLibrary
         public bool AjouterPersonne(Personne personne)
         {
             if (personne == null)
-                return false;
+                throw new Exception("Pas de personne renseignée");
 
             Personne p = RechercherPersonne(personne.Id);
             if (p != null) // La personne existe déjà

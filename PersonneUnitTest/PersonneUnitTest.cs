@@ -7,9 +7,11 @@ namespace PersonneUnitTest
 {
     [TestClass]
     public class PersonneUnitTest
-    {
-        private Service production;
-        private void CreationService()
+    {        
+        private static Service production;
+
+        [ClassInitialize]
+        public static void CreationService(TestContext context) // on évite la redondance : on ne fait pas de tests sur service
         {
             production = new Service(1, "Production");
         }
@@ -17,7 +19,7 @@ namespace PersonneUnitTest
         [TestMethod]
         public void TestSalaireBrutEmploye()
         {
-            Employe employe = new Employe(2, "KERBAN", "Henry", new DateTime(1981, 09, 24), 2000, production, 5);
+            Employe employe = new Employe(2, "KERBAN", "Henry", new DateTime(1981, 09, 24), 2000, production, 5); // pas redondant car on fait des tests différents sur l'employe
             Assert.AreEqual(2000, employe.SalaireBrut);
         }
 

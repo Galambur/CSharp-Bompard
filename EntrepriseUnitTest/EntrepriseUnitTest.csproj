@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28CEC5FE-BB15-479F-9C62-3E0D20C308AA}</ProjectGuid>
+    <ProjectGuid>{8C9EE59F-3577-4A70-B9EA-6FE42ECE49CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PersonneUnitTest</RootNamespace>
-    <AssemblyName>PersonneUnitTest</AssemblyName>
+    <RootNamespace>EntrepriseUnitTest</RootNamespace>
+    <AssemblyName>EntrepriseUnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PersonneUnitTest.cs" />
+    <Compile Include="EntrepriseUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
