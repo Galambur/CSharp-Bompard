@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadre.cs" />
+    <Compile Include="PersonneNullReferenceException.cs" />
+    <Compile Include="PersonneInvalidAttributeException.cs" />
+    <Compile Include="PersonneException.cs" />
     <Compile Include="TacheCout.cs" />
     <Compile Include="ListeTache.cs" />
     <Compile Include="Tache.cs" />

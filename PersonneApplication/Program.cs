@@ -23,7 +23,7 @@ namespace PersonneApplication
 
             Entreprise entreprise = new Entreprise();
 
-            entreprise.AjouterPersonne(new Employe(1, "DUPONT", "Charles", new DateTime(1998, 04, 12), 1600, production, 14));
+            entreprise.AjouterPersonne(new Employe(1, "DUPONT", "Charles", new DateTime(1965, 04, 12), 1600, production, 14));
             entreprise.AjouterPersonne(new Employe(2, "KERBAN", "Henry", new DateTime(1981, 09, 24), 1500, production, 7));
             entreprise.AjouterPersonne(new Employe(3, "CHAMPOT", "Paul", new DateTime(1981, 09, 17), 1500, production, 6));
             entreprise.AjouterPersonne(new Cadre(4, "JOULIE", "Alexandre", new DateTime(1987, 11, 21), 2100, compta, 100, Cadre.TypeStatus.Aucun));

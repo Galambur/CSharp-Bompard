@@ -23,7 +23,7 @@ namespace PersonneLibrary
         public bool AjouterPersonne(Personne personne)
         {
             if (personne == null)
-                throw new Exception("Pas de personne renseignée");
+                throw new PersonneNullReferenceException("Pas de personne renseignée");
 
             Personne p = RechercherPersonne(personne.Id);
             if (p != null) // La personne existe déjà
@@ -33,21 +33,21 @@ namespace PersonneLibrary
             return true;
         }
 
-        public bool SupprimerPersonne(Personne personne)
+        public void SupprimerPersonne(Personne personne)
         {
             if (personne == null)
-                return false;
+                throw new PersonneNullReferenceException();
 
-            return SupprimerPersonne(personne.Id);
+            SupprimerPersonne(personne.Id);
         }
-        public bool SupprimerPersonne(int id)
+
+        public void SupprimerPersonne(int id)
         {
             Personne p = RechercherPersonne(id);
             if (p == null)
-                return false;
+                throw new PersonneNullReferenceException();
 
             listePersonnes.Remove(p);
-            return true;
         }
         #endregion
 

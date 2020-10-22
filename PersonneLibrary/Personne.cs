@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PersonneLibrary
 {
@@ -26,7 +22,7 @@ namespace PersonneLibrary
             private set
             {
                 if (value < 1)
-                    throw new Exception("L'id doit être supérieur à 0");
+                    throw new PersonneInvalidAttributeException("L'id doit être supérieur à 0");
                 id = value;
             }
         }
@@ -36,7 +32,7 @@ namespace PersonneLibrary
             private set
             {
                 if (String.IsNullOrEmpty(value))
-                    throw new Exception("Le nom doit être renseigné");
+                    throw new PersonneInvalidAttributeException("Le nom doit être renseigné");
                 nom = value.ToUpper();
             }
         }
@@ -46,7 +42,7 @@ namespace PersonneLibrary
             private set
             {
                 if (String.IsNullOrEmpty(value))
-                    throw new Exception("Le prénom doit être renseigné");
+                    throw new PersonneInvalidAttributeException("Le prénom doit être renseigné");
                 prenom = value.Substring(0, 1).ToUpper() + value.Substring(1).ToLower();
             }
         }
@@ -61,7 +57,7 @@ namespace PersonneLibrary
                 date = new DateTime(date.Year - 18, date.Month, date.Day);
                 // La date de naissance doit être inférieure à (la date du jour -18)
                 if (value.CompareTo(date) >= 0)
-                    throw new Exception("La personne doit être majeure");
+                    throw new PersonneInvalidAttributeException("La personne doit être majeure");
 
                 dateDeNaissance = value;
             }
